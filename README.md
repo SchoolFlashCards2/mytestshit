@@ -34,7 +34,7 @@
 </h2>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Male_and_female_chicken_sitting_together.jpg/220px-Male_and_female_chicken_sitting_together.jpg" height=150 width=250>
 <p>ㅤ</p>
-<h2><form action="cheesefunnel23@gmail.com" method="get">
+<h2><form action="skibidi.php" method="get">
  <label for="Random">Write whatever here using the form tool!(dont hit enter it does not have a destination yet.)</label>
  <input type="text" id="Random" name="Random"><br><br>
  </form></h2>
