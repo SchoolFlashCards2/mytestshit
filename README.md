@@ -38,7 +38,7 @@
  <label for="Random">Write whatever here using the form tool!(dont hit enter it does not have a destination yet.)</label>
  <input type="text" id="Random" name="Random"><br><br>
  </form></h2>
-<p>you can also make <b>bold,</b> <i>italic,</i> and <u>underlined</u> text!</p>
+<h2>you can also make <b>bold,</b> <i>italic,</i> and <u>underlined</u> text!</h2>
 
 </body>
 </html>
