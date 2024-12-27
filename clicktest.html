@@ -3,38 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stacked Red Boxes Tower</title>
+    <title>Adjustable Red Boxes Tower</title>
     <style>
-        /* Style for the body to use flexbox for centering */
         body {
-            display: flex;                /* Enable flexbox */
-            justify-content: center;      /* Center horizontally */
-            align-items: center;          /* Center vertically */
-            height: 100vh;               /* Full viewport height */
-            margin: 0;                   /* Remove default margin */
-            background-color: #f0f0f0;   /* Light background for contrast */
+            display: flex;
+            flex-direction: column; /* Stack input fields and boxes vertically */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
         }
 
-        /* Style for the red box */
         .red-box {
-            width: 100px;                /* Width of the box */
-            height: 100px;               /* Height of the box */
-            background-color: red;       /* Color of the box */
-            cursor: pointer;              /* Change cursor to pointer on hover */
-            margin: 5px;                 /* Space between boxes */
+            background-color: red;
+            margin: 5px;
+        }
+
+        input {
+            margin: 5px;
         }
     </style>
 </head>
 <body>
+
     <div>
-        <div class="red-box" onclick="showAlert()"></div> <!-- First red box -->
-        <div class="red-box" onclick="showAlert()"></div> <!-- Second red box -->
+        <h3>Box 1</h3>
+        <input type="number" id="width1" placeholder="Width (px)" />
+        <input type="number" id="height1" placeholder="Height (px)" />
+        <button onclick="resizeBox('box1')">Resize</button>
+        <div class="red-box" id="box1" onclick="showAlert()"></div>
+    </div>
+
+    <div>
+        <h3>Box 2</h3>
+        <input type="number" id="width2" placeholder="Width (px)" />
+        <input type="number" id="height2" placeholder="Height (px)" />
+        <button onclick="resizeBox('box2')">Resize</button>
+        <div class="red-box" id="box2" onclick="showAlert()"></div>
     </div>
 
     <script>
-        // Function to display the alert  
         function showAlert() {
             alert("You clicked a red box!");
+        }
+
+        function resizeBox(boxId) {
+            const width = document.getElementById(`width${boxId.charAt(boxId.length - 1)}`).value;
+            const height = document.getElementById(`height${boxId.charAt(boxId.length - 1)}`).value;
+
+            const box = document.getElementById(boxId);
+            if (width) box.style.width = width + 'px';
+            if (height) box.style.height = height + 'px';
         }
     </script>
 </body>
