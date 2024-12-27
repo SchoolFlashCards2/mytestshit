@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stacked Red Boxes</title>
+    <title>Stacked Red Boxes Tower</title>
     <style>
         /* Style for the body to use flexbox for centering */
         body {
@@ -15,32 +15,18 @@
             background-color: #f0f0f0;   /* Light background for contrast */
         }
 
-        /* Container for the stacked boxes */
-        .box-container {
-            position: relative;           /* Positioning context for absolute children */
-        }
-
         /* Style for the red box */
         .red-box {
             width: 100px;                /* Width of the box */
             height: 100px;               /* Height of the box */
             background-color: red;       /* Color of the box */
             cursor: pointer;              /* Change cursor to pointer on hover */
-            position: absolute;           /* Position boxes absolutely within the container */
-        }
-
-        /* Position the second box above the first */
-        .red-box:nth-child(1) {
-            top: 0;                      /* Position the first box at the top */
-        }
-
-        .red-box:nth-child(2) {
-            top: 0;                      /* Position the second box directly on top of the first */
+            margin: 5px;                 /* Space between boxes */
         }
     </style>
 </head>
 <body>
-    <div class="box-container">
+    <div>
         <div class="red-box" onclick="showAlert()"></div> <!-- First red box -->
         <div class="red-box" onclick="showAlert()"></div> <!-- Second red box -->
     </div>
@@ -48,7 +34,7 @@
     <script>
         // Function to display the alert  
         function showAlert() {
-            alert("You clicked the red box!");
+            alert("You clicked a red box!");
         }
     </script>
 </body>
