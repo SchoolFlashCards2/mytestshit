@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adjustable Red Boxes Tower</title>
+    <title>Customizable Red Boxes Tower</title>
     <style>
         body {
             display: flex;
-            flex-direction: column; /* Stack input fields and boxes vertically */
+            flex-direction: column; /* Stack boxes vertically */
             align-items: center;
             height: 100vh;
             margin: 0;
@@ -18,42 +18,17 @@
             background-color: red;
             margin: 5px;
         }
-
-        input {
-            margin: 5px;
-        }
     </style>
 </head>
 <body>
 
-    <div>
-        <h3>Box 1</h3>
-        <input type="number" id="width1" placeholder="Width (px)" />
-        <input type="number" id="height1" placeholder="Height (px)" />
-        <button onclick="resizeBox('box1')">Resize</button>
-        <div class="red-box" id="box1" onclick="showAlert()"></div>
-    </div>
-
-    <div>
-        <h3>Box 2</h3>
-        <input type="number" id="width2" placeholder="Width (px)" />
-        <input type="number" id="height2" placeholder="Height (px)" />
-        <button onclick="resizeBox('box2')">Resize</button>
-        <div class="red-box" id="box2" onclick="showAlert()"></div>
-    </div>
+    <div class="red-box" id="box1" style="width: 100px; height: 100px;" onclick="showAlert()">Box 1</div>
+    <div class="red-box" id="box2" style="width: 150px; height: 80px;" onclick="showAlert()">Box 2</div>
+    <div class="red-box" id="box3" style="width: 200px; height: 150px;" onclick="showAlert()">Box 3</div>
 
     <script>
         function showAlert() {
             alert("You clicked a red box!");
-        }
-
-        function resizeBox(boxId) {
-            const width = document.getElementById(`width${boxId.charAt(boxId.length - 1)}`).value;
-            const height = document.getElementById(`height${boxId.charAt(boxId.length - 1)}`).value;
-
-            const box = document.getElementById(boxId);
-            if (width) box.style.width = width + 'px';
-            if (height) box.style.height = height + 'px';
         }
     </script>
 </body>
