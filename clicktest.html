@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editable Red Boxes</title>
+    <title>Editable Red Boxes with Alerts</title>
     <style>
         body {
             display: flex;
@@ -17,26 +17,36 @@
 
         .red-box {
             margin: 10px; /* Space between boxes */
+            cursor: pointer; /* Change cursor to indicate clickable */
         }
 
         /* Individual box styles */
         .box1 {
             background-color: red; /* Box 1 specific color */
             width: 150px;  /* Box 1 width */
-            height: 150px; /* Box 1 height */
+            height: 100px; /* Box 1 height */
         }
 
         .box2 {
-            background-color: red; /* Box 2 specific color */
-            width: 150px;  /* Box 2 width */
+            background-color: blue; /* Box 2 specific color */
+            width: 200px;  /* Box 2 width */
             height: 150px; /* Box 2 height */
         }
     </style>
+    <script>
+        function alertBox1() {
+            alert("This is Box 1!");
+        }
+
+        function alertBox2() {
+            alert("This is Box 2!");
+        }
+    </script>
 </head>
 <body>
 
-    <div class="red-box box1"></div> <!-- Box 1 -->
-    <div class="red-box box2"></div> <!-- Box 2 -->
+    <div class="red-box box1" onclick="alertBox1()"></div> <!-- Box 1 -->
+    <div class="red-box box2" onclick="alertBox2()"></div> <!-- Box 2 -->
 
 </body>
 </html>
