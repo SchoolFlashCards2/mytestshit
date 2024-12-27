@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style for the red box */
+        .red-box {
+            width: 100px;        /* width of the box */
+            height: 100px;       /* height of the box */
+            background-color: red; /* color of the box */
+            cursor: pointer;      /* change cursor to pointer on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="red-box" onclick="showAlert()"></div> <!-- The clickable red box -->
+
+    <script>
+        // Function to display the alert  
+        function showAlert() {
+            alert("You clicked the red box!");
+        }
+    </script>
+</body>
+</html>
