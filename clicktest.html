@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Box Tower</title>
+    <title>Editable Red Boxes</title>
     <style>
         body {
             display: flex;
+            flex-direction: column; /* Stack vertically */
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
             height: 100vh;
@@ -15,17 +16,27 @@
         }
 
         .red-box {
-            background-color: red;
-            width: 150px; /* Set a fixed width */
-            height: 150px; /* Set a fixed height */
-            margin: 5px; /* Space between boxes */
+            margin: 10px; /* Space between boxes */
+        }
+
+        /* Individual box styles */
+        .box1 {
+            background-color: red; /* Box 1 specific color */
+            width: 150px;  /* Box 1 width */
+            height: 100px; /* Box 1 height */
+        }
+
+        .box2 {
+            background-color: blue; /* Box 2 specific color */
+            width: 200px;  /* Box 2 width */
+            height: 150px; /* Box 2 height */
         }
     </style>
 </head>
 <body>
 
-    <div class="red-box"></div> <!-- Box 1 -->
-    <div class="red-box"></div> <!-- Box 2 -->
+    <div class="red-box box1"></div> <!-- Box 1 -->
+    <div class="red-box box2"></div> <!-- Box 2 -->
 
 </body>
 </html>
